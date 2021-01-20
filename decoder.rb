@@ -26,3 +26,11 @@ MORSE = {
   "Y" => "-.--",
   "Z" => "--.."
 }
+
+def decode(morse_code)
+  
+end
+
+# Test with morse string -> should be text = "HEY JUDE DONT MAKE IT BAD"
+morse = ".... . -.--|.--- ..- -.. .|-.. --- -. -|-- .- -.- .|.. -|-... .- -.."
+decode(morse)
