@@ -28,7 +28,11 @@ MORSE = {
 }
 
 def decode(morse_code)
-  
+  words = morse_text.split('|')
+  words.map do |word|
+    letters = word.split(' ')
+    letters.map { |letter| MORSE.key(letter) }.join('')
+  end.join(' ')
 end
 
 # Test with morse string -> should be text = "HEY JUDE DONT MAKE IT BAD"
