@@ -26,3 +26,11 @@ MORSE = {
   "Y" => "-.--",
   "Z" => "--.."
 }
+
+def encode(text_string)
+  
+end
+
+# Test with text string -> should be morse = ".... . -.--|.--- ..- -.. .|-.. --- -. -|-- .- -.- .|.. -|-... .- -.."
+text = "Hey Jude, don't make it bad"
+encode(text)
