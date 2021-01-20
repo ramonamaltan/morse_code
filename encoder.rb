@@ -28,7 +28,14 @@ MORSE = {
 }
 
 def encode(text_string)
-  
+  # ignore special characters
+  pattern = /('|"|\.|\*|\/|-|\\|\)|,|\+|\(|\^|\?|!|~|`)/
+  words = text_string.upcase.gsub(pattern, '').split(' ')
+  p words.map { |word| encode_word(word) }.join('|')
+end
+
+def encode_word(word)
+  word.split('').map { |letter| MORSE[letter.upcase] }.join(' ')
 end
 
 # Test with text string -> should be morse = ".... . -.--|.--- ..- -.. .|-.. --- -. -|-- .- -.- .|.. -|-... .- -.."
